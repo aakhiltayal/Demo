@@ -253,26 +253,6 @@ class plot_app(*uic.loadUiType(path + 'plot_app.ui')):
             self.horizontalLayout_param.addWidget(self.shells[key])
             self.shells[key].groupBox.setTitle(f'Shell: {i} :' + key)
 
-        #
-        #
-        #
-        # if len(self.shells) < _value:
-        #     for i in range(len(self.shells), _value):
-        #         self.shells[i] = Shell()
-        #         self.horizontalLayout_param.addWidget(self.shells[i])
-        #         self.shells[i].groupBox.setTitle('Shell ' + str(i+1))
-        # else:
-        #     for i in range(len(self.shells)-1, _value-1, -1):
-        #         self.horizontalLayout_param.removeWidget(self.shells[i])
-        #         del self.shells[i]
-        #         print(self.shells)
-        #
-        #
-        # if self.horizontalLayout_param.count()>0:
-        #     print(True)
-        #
-        # # self.horizontalLayout.addWidget(Shell())
-
     def load_chi(self):
         file = QtWidgets.QFileDialog.getOpenFileName(parent=self)[0]
         col_names = ['k', 'chi', 'chik', 'chik2', 'chik3', 'win', 'energy']
